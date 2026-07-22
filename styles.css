@@ -1,0 +1,314 @@
+
+:root {
+  --color-fondo: #fcfbf7;       
+  --verde-principal: #606c38;    
+  --verde-pastel: #e9f5db;       
+  --amarillo-pastel: #fefae0;  
+  --rosa-pastel: #ffe5ec;     
+  --texto-oscuro: #2b3a1a;        
+  --borde-suave: #e0dbcf;
+  --blanco: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--color-fondo);
+  color: var(--texto-oscuro);
+  line-height: 1.6;
+  padding: 0 0 40px 0;
+}
+
+
+.hero {
+  background-color: var(--verde-principal);
+  color: var(--amarillo-pastel);
+  text-align: center;
+  padding: 40px 20px;
+  border-bottom: 5px solid var(--verde-pastel);
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.hero p {
+  font-size: 1rem;
+  margin: 5px 0;
+  opacity: 0.9;
+}
+
+
+.contenido {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.contenido h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: var(--verde-principal);
+  border-bottom: 2px solid var(--verde-pastel);
+  padding-bottom: 8px;
+}
+
+/* --- Input de Búsqueda --- */
+#busqueda {
+  width: 100%;
+  padding: 12px 20px;
+  margin-bottom: 30px;
+  border: 2px solid var(--borde-suave);
+  border-radius: 25px; 
+  font-size: 1rem;
+  color: var(--texto-oscuro);
+  background-color: var(--blanco);
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+#busqueda:focus {
+  border-color: var(--verde-principal);
+  box-shadow: 0 0 8px rgba(96, 108, 56, 0.2);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.grid a {
+  display: block;
+  text-align: center;
+  padding: 20px 15px;
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--texto-oscuro);
+  background-color: var(--verde-pastel);
+  border-radius: 12px;
+  transition: transform 0.2s ease, background-color 0.3s ease, box-shadow 0.2s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.grid a:hover {
+  transform: translateY(-3px);
+  background-color: var(--amarillo-pastel);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.grid a:nth-child(3n) {
+  background-color: var(--amarillo-pastel);
+}
+.grid a:nth-child(3n):hover {
+  background-color: var(--rosa-pastel);
+}
+
+.grid a:nth-child(3n+1) {
+  background-color: var(--rosa-pastel);
+}
+.grid a:nth-child(3n+1):hover {
+  background-color: var(--verde-pastel);
+}
+
+
+.estadisticas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.estadisticas div {
+  background-color: var(--blanco);
+  border: 1px solid var(--borde-suave);
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+
+.estadisticas div:nth-child(1) { border-top: 5px solid var(--verde-principal); }
+.estadisticas div:nth-child(2) { border-top: 5px solid var(--amarillo-pastel); }
+.estadisticas div:nth-child(3) { border-top: 5px solid var(--rosa-pastel); }
+
+.estadisticas h3 {
+  font-size: 2rem;
+  color: var(--verde-principal);
+  margin-bottom: 5px;
+}
+
+.estadisticas p {
+  font-size: 0.9rem;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 600px) {
+  .estadisticas {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
+.diapositiva-card {
+  background-color: var(--blanco);
+  border: 1px solid var(--borde-suave);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03);
+  margin-bottom: 30px;
+}
+
+.diapositiva-card h2 {
+  color: var(--verde-principal);
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  border-bottom: 3px solid var(--amarillo-pastel);
+  padding-bottom: 10px;
+}
+
+.diapositiva-card p {
+  font-size: 1.15rem;
+  color: var(--texto-oscuro);
+  margin-bottom: 15px;
+}
+
+.navegacion-diapos {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.btn-nav {
+  display: inline-block;
+  padding: 12px 24px;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.btn-volver {
+  background-color: var(--verde-principal);
+  color: var(--amarillo-pastel);
+  flex-grow: 2; 
+}
+
+.btn-volver:hover {
+  background-color: var(--texto-oscuro);
+  transform: translateY(-2px);
+}
+
+.btn-ant {
+  background-color: var(--rosa-pastel);
+  color: var(--texto-oscuro);
+  flex-grow: 1;
+}
+
+.btn-ant:hover {
+  background-color: var(--verde-pastel);
+  transform: translateY(-2px);
+}
+
+.btn-sig {
+  background-color: var(--verde-pastel);
+  color: var(--texto-oscuro);
+  flex-grow: 1;
+}
+
+.btn-sig:hover {
+  background-color: var(--amarillo-pastel);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 480px) {
+  .navegacion-diapos {
+    flex-direction: column;
+  }
+  .btn-nav {
+    width: 100%;
+  }
+}
+
+.galeria-vegetales {
+  margin-bottom: 35px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.galeria-scroll {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto; 
+  padding: 10px 5px 20px 5px;
+  scroll-behavior: smooth;
+  scrollbar-width: none; 
+}
+
+.galeria-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.vegetal-item {
+  flex: 0 0 calc(25% - 12px); 
+  min-width: 180px;
+  background-color: var(--blanco);
+  border: 1px solid var(--borde-suave);
+  border-radius: 16px;
+  padding: 8px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vegetal-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(96, 108, 56, 0.1);
+}
+
+.vegetal-item img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover; 
+  border-radius: 10px;
+  margin-bottom: 8px;
+}
+
+.vegetal-item span {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--verde-principal);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: block;
+  margin-top: 4px;
+}
+
+@media (max-width: 768px) {
+  .vegetal-item {
+    flex: 0 0 45%; 
+  }
+}
+
+@media (max-width: 480px) {
+  .vegetal-item {
+    flex: 0 0 70%; 
+  }
+}
